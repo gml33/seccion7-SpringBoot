@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org))">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<form th:object="${persona}" th:action="${accion}" method="post">
+			<input type="hidden" th:field="*{id}">
+			<h1>Nueva Persona</h1>
+			<table border="0" cellpadding="10" >
+				<tr>
+					<td>Nombre: </td>
+					<td><input name="Nombre" type="text" th:field="*{nombre}"></td>
+				</tr>
+				<tr>
+					<td>Edad: </td>
+					<td><input name="Edad" type="number" th:field="*{edad}"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="submit">Enviar</button></td>
+				</tr>
+				<tr>
+					<td><a href="/personas">Volver al listado</a></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
