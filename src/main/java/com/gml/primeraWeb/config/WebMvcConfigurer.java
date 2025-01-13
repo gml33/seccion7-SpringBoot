@@ -13,5 +13,7 @@ public class WebMvcConfigurer implements org.springframework.web.servlet.config.
         registry.addViewController("/403").setViewName("403");
 
         registry.addViewController("/login").setViewName("login");
+
+
     }
 }
